@@ -1,0 +1,4 @@
+pyopenjtalk-plus
+tqdm
+nltk
+jaconv
