@@ -43,6 +43,12 @@ pyopenjtalk-plusでのスコア
 0.8879945857880588
 
 アクセント指定ベンチマーク
+< jsut.tsv >
+0.9779150626776381
+0.9738592684419247
+0.9630560960025829
+0.9496155039311297
+
 
 各ファイルの入手先
 
@@ -62,6 +68,9 @@ WIKIPEDIA.tsv
 wikipedia Annotated Corpusから作成
 https://github.com/ku-nlp/WikipediaAnnotatedCorpus
 
+jsut.tsv
+jsutコーパスのラベルから作りました
+https://github.com/sarulab-speech/jsut-label/
 
 #規模が小さいため未使用
 itaコーパスのトランスクリプトの入手先
