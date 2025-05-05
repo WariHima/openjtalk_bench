@@ -115,10 +115,17 @@ data = []
 
 for line in text:
     accent = line.split("\t")[1]
+    new_acc = ""
+    for i in range(len(accent)):
+        if accent[i] in ("[", "]", "#", " ", "$", "_", "?", "^", "$"):
+            new_acc += accent[i]
+        else:
+            new_acc += "X"
+
     cur_text = line.split("\t")[2]
 
     data.append(cur_text)
-    label.append(accent)
+    label.append(new_acc)
 
 i = 0
 
@@ -133,8 +140,14 @@ hyp = []
 for i, d in enumerate(tqdm(data)):
     cur_text = __pyopenjtalk_g2p_prosody(d)
     cur_text = " ".join(cur_text)
-   
-    hyp.append(list(cur_text))
+    new_text = ""
+    for i in range(len(cur_text)):
+        if cur_text[i] in ("[", "]", "#", " ", "$", "_", "?", "^", "$"):
+            new_text += cur_text[i]
+        else:
+            new_text += "X"
+            
+    hyp.append(list(new_text))
     ref.append([list(label[i])])
 
 # %%
